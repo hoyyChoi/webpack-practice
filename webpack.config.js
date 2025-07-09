@@ -1,11 +1,8 @@
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import { fileURLToPath } from "url";
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { runtime } = require("webpack");
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export default {
+module.exports = {
   mode: "development",
   devtool: "source-map",
 
@@ -45,12 +42,12 @@ export default {
         exclude: /node_modules/, // node_modules 제외
         use: {
           loader: "babel-loader",
-          // options: {
-          // presets: [
-          //   ["@babel/preset-env", { modules: false }],
-          //   ["@babel/preset-react", { runtime: "automatic" }],
-          // ], // ES6+ → ES5 변환
-          // },
+          options: {
+            presets: [
+              "@babel/preset-env",
+              ["@babel/preset-react", { runtime: "automatic" }],
+            ], // ES6+ → ES5 변환
+          },
         },
       },
     ],
