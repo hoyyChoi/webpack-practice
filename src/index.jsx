@@ -1,7 +1,6 @@
 import Button from "./Button.jsx";
 import "./index.css";
 import { aa } from "./mato.js";
-import React from "react";
 import ReactDOM from "react-dom/client";
 
 function sayHello() {
