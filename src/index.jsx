@@ -4,7 +4,7 @@ import { aa } from "./mato.js";
 import ReactDOM from "react-dom/client";
 
 function sayHello() {
-  console.log("hello");
+  console.log("hell32ㄹ2ㄹ23ㄹo");
 }
 
 sayHello();
